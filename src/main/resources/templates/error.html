@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Something Went Wrong</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white min-h-screen flex items-center justify-center p-4">
+    <div class="text-center max-w-md mx-auto">
+        <!-- Error Icon -->
+        <div class="mb-8">
+            <div class="w-24 h-24 mx-auto bg-orange-100 rounded-full flex items-center justify-center">
+                <svg class="w-12 h-12 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"></path>
+                </svg>
+            </div>
+        </div>
+        
+        <!-- Error Message -->
+        <h1 class="text-3xl font-bold text-gray-900 mb-4" th:text="${errorAttributes.error}">Something Went Wrong</h1>
+        <p class="text-gray-600 mb-8 leading-relaxed" th:text="${errorAttributes.message}">
+            We're sorry, but something unexpected happened. Please try again or contact support if the problem persists.
+        </p>
+        
+        <!-- Action Buttons -->
+        <a class="space-y-4" th:href="@{/}">
+            <button class="w-full bg-orange-500 hover:bg-orange-600 text-white font-medium py-3 px-6 rounded-lg transition-colors">
+                Try Again
+            </button>
+            <button class="w-full border border-orange-500 text-orange-500 hover:bg-orange-50 font-medium py-3 px-6 rounded-lg transition-colors">
+                Go Back Home
+            </button>
+        </a>
+        
+        <!-- Error Code -->
+        <div class="mt-8 pt-6 border-t border-gray-200">
+            <p class="text-sm text-gray-500" th:text="${errorAttributes.status}">Error Code: 500</p>
+        </div>
+    </div>
+</body>
+</html>
