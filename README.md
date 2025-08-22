@@ -41,6 +41,17 @@ This repository hosts a lightweight, full-stack Invoice Generator application bu
 | Others            | Lombok, Git                         |
 
 ---
+## 🌐 Available Endpoints
+
+| Name              | API                                 |
+|-------------------|-------------------------------------|
+| Home Page         | https://16.171.33.184/invoice       |
+| Save Dealer info  | https://16.171.33.184/save/dealer   |
+| Save Vehicle info | https://16.171.33.184/save/vehicle  |
+| Generate Invoice  | https://16.171.33.184/generate/invoice|
+| Download Invoice  | https://16.171.33.184/download/invoice|
+
+---
 
 ## 🗂️ Project Structure
 * `src/`
