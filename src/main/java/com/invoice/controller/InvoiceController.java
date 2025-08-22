@@ -76,7 +76,7 @@ public class InvoiceController {
 
         // Generate a unique transaction ID
         String transactionId = UtilityMethods.generateTransactionId();
-        String logoPath = "src/main/resources/files/vlogo.png";
+        String logoPath = "src/main/resources/static/images/logo.png";
 
         byte[] pdfBytes = PdfGeneratorService.generateInvoice(
                                 dealer.getName(),
